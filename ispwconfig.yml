@@ -1,0 +1,660 @@
+!!com.compuware.ispw.wzzms.models.IspwRoot
+ispwApplication:
+  application: MKS1
+  encryptionProtocol: None
+  host: cwcc.bmc.com
+  hostCodePage: '1047'
+  pathMappings:
+  - path: \ACTI
+    types:
+    - fileExtension: acti
+      ispwType: ACTI
+  - path: \ADDL
+    types:
+    - fileExtension: addl
+      ispwType: ADDL
+  - path: \AMAC
+    types:
+    - fileExtension: amac
+      ispwType: AMAC
+  - path: \ARCH
+    types:
+    - fileExtension: archive
+      ispwType: ARCH
+  - path: \ASM
+    types:
+    - fileExtension: asm
+      ispwType: ASM
+  - path: \ASUB
+    types:
+    - fileExtension: asub
+      ispwType: ASUB
+  - path: \BASE
+    types:
+    - fileExtension: base
+      ispwType: BASE
+  - path: \C
+    types:
+    - fileExtension: c
+      ispwType: C
+  - path: \CHGHIST
+    types:
+    - fileExtension: lst
+      ispwType: CHGHIST
+  - path: \CHST
+    types:
+    - fileExtension: lst
+      ispwType: CHST
+  - path: \CICT
+    types:
+    - fileExtension: cict
+      ispwType: CICT
+  - path: \CLIST
+    types:
+    - fileExtension: clist
+      ispwType: CLIST
+  - path: \CLSS
+    types:
+    - fileExtension: clss
+      ispwType: CLSS
+  - path: \CLST
+    types:
+    - fileExtension: clst
+      ispwType: CLST
+  - path: \CMAP
+    types:
+    - fileExtension: cmap
+      ispwType: CMAP
+  - path: \COB
+    types:
+    - fileExtension: cbl
+      ispwType: COB
+  - path: \COBS
+    types:
+    - fileExtension: cbl
+      ispwType: COBS
+  - path: \COBX
+    types:
+    - fileExtension: cbl
+      ispwType: COBX
+  - path: \COB6
+    types:
+    - fileExtension: cob6
+      ispwType: COB6
+  - path: \COPY
+    types:
+    - fileExtension: cpy
+      ispwType: COPY
+  - path: \COPYG
+    types:
+    - fileExtension: cpy
+      ispwType: COPYG
+  - path: \CPY
+    types:
+    - fileExtension: cpy
+      ispwType: CPY
+  - path: \DATA
+    types:
+    - fileExtension: data
+      ispwType: DATA
+  - path: \DBD
+    types:
+    - fileExtension: dbd
+      ispwType: DBD
+  - path: \DBR
+    types:
+    - fileExtension: srx
+      ispwType: DBR
+  - path: \DBRM
+    types:
+    - fileExtension: dbrm
+      ispwType: DBRM
+  - path: \DB2B
+    types:
+    - fileExtension: cpy
+      ispwType: DB2B
+  - path: \DCL
+    types:
+    - fileExtension: cpy
+      ispwType: DCL
+  - path: \DCLG
+    types:
+    - fileExtension: dclg
+      ispwType: DCLG
+  - path: \DCLS
+    types:
+    - fileExtension: dcls
+      ispwType: DCLS
+  - path: \DDIO
+    types:
+    - fileExtension: prm
+      ispwType: DDIO
+  - path: \DDL
+    types:
+    - fileExtension: ddl
+      ispwType: DDL
+  - path: \DJOB
+    types:
+    - fileExtension: djob
+      ispwType: DJOB
+  - path: \DLDB
+    types:
+    - fileExtension: dldb
+      ispwType: DLDB
+  - path: \DLDC
+    types:
+    - fileExtension: dldc
+      ispwType: DLDC
+  - path: \DMEM
+    types:
+    - fileExtension: lst
+      ispwType: DMEM
+  - path: \DML
+    types:
+    - fileExtension: dml
+      ispwType: DML
+  - path: \DOCJ
+    types:
+    - fileExtension: docj
+      ispwType: DOCJ
+  - path: \DOCP
+    types:
+    - fileExtension: docp
+      ispwType: DOCP
+  - path: \DSCT
+    types:
+    - fileExtension: dsct
+      ispwType: DSCT
+  - path: \EZTC
+    types:
+    - fileExtension: cbl
+      ispwType: EZTC
+  - path: \FILE
+    types:
+    - fileExtension: file
+      ispwType: FILE
+  - path: \FLDR
+    types:
+    - fileExtension: fldr
+      ispwType: FLDR
+  - path: \FMT
+    types:
+    - fileExtension: fmt
+      ispwType: FMT
+  - path: \FORT
+    types:
+    - fileExtension: fort
+      ispwType: FORT
+  - path: \H
+    types:
+    - fileExtension: h
+      ispwType: H
+  - path: \HTML
+    types:
+    - fileExtension: html
+      ispwType: HTML
+  - path: \INCL
+    types:
+    - fileExtension: incl
+      ispwType: INCL
+  - path: \INTR
+    types:
+    - fileExtension: interface
+      ispwType: INTR
+  - path: \IWS
+    types:
+    - fileExtension: txt
+      ispwType: IWS
+  - path: \IWSS
+    types:
+    - fileExtension: iwss
+      ispwType: IWSS
+  - path: \JAVA
+    types:
+    - fileExtension: java
+      ispwType: JAVA
+  - path: \JCL
+    types:
+    - fileExtension: jcl
+      ispwType: JCL
+  - path: \JCLT
+    types:
+    - fileExtension: jcl
+      ispwType: JCLT
+  - path: \JOB
+    types:
+    - fileExtension: jcl
+      ispwType: JOB
+  - path: \JOBH
+    types:
+    - fileExtension: jcl
+      ispwType: JOBH
+  - path: \JOBS
+    types:
+    - fileExtension: jcl
+      ispwType: JOBS
+  - path: \JOBT
+    types:
+    - fileExtension: jobt
+      ispwType: JOBT
+  - path: \LCTL
+    types:
+    - fileExtension: lctl
+      ispwType: LCTL
+  - path: \LINK
+    types:
+    - fileExtension: TXT
+      ispwType: LINK
+  - path: \LIST
+    types:
+    - fileExtension: lst
+      ispwType: LIST
+  - path: \LKDC
+    types:
+    - fileExtension: txt
+      ispwType: LKDC
+  - path: \LKED
+    types:
+    - fileExtension: txt
+      ispwType: LKED
+  - path: \LOAD
+    types:
+    - fileExtension: load
+      ispwType: LOAD
+  - path: \LOB
+    types:
+    - fileExtension: lob
+      ispwType: LOB
+  - path: \LOD
+    types:
+    - fileExtension: lod
+      ispwType: LOD
+  - path: \LOO
+    types:
+    - fileExtension: loo
+      ispwType: LOO
+  - path: \LPCT
+    types:
+    - fileExtension: lpct
+      ispwType: LPCT
+  - path: \LST
+    types:
+    - fileExtension: srx
+      ispwType: LST
+  - path: \LSTC
+    types:
+    - fileExtension: lst
+      ispwType: LSTC
+  - path: \LSTS
+    types:
+    - fileExtension: listructure
+      ispwType: LSTS
+  - path: \LSTU
+    types:
+    - fileExtension: lst
+      ispwType: LSTU
+  - path: \MAN
+    types:
+    - fileExtension: man
+      ispwType: MAN
+  - path: \MAPC
+    types:
+    - fileExtension: mapc
+      ispwType: MAPC
+  - path: \MCC
+    types:
+    - fileExtension: mcc
+      ispwType: MCC
+  - path: \MDDL
+    types:
+    - fileExtension: mddl
+      ispwType: MDDL
+  - path: \MERG
+    types:
+    - fileExtension: merg
+      ispwType: MERG
+  - path: \MPC
+    types:
+    - fileExtension: mpc
+      ispwType: MPC
+  - path: \MSGS
+    types:
+    - fileExtension: msgs
+      ispwType: MSGS
+  - path: \NATA
+    types:
+    - fileExtension: nata
+      ispwType: NATA
+  - path: \NATC
+    types:
+    - fileExtension: natc
+      ispwType: NATC
+  - path: \NATG
+    types:
+    - fileExtension: natg
+      ispwType: NATG
+  - path: \NATH
+    types:
+    - fileExtension: nath
+      ispwType: NATH
+  - path: \NATL
+    types:
+    - fileExtension: natl
+      ispwType: NATL
+  - path: \NATM
+    types:
+    - fileExtension: natm
+      ispwType: NATM
+  - path: \NATN
+    types:
+    - fileExtension: natn
+      ispwType: NATN
+  - path: \NATP
+    types:
+    - fileExtension: natp
+      ispwType: NATP
+  - path: \NATS
+    types:
+    - fileExtension: nats
+      ispwType: NATS
+  - path: \NOTE
+    types:
+    - fileExtension: note
+      ispwType: NOTE
+  - path: \OBJ
+    types:
+    - fileExtension: obj
+      ispwType: OBJ
+  - path: \OP04
+    types:
+    - fileExtension: op04
+      ispwType: OP04
+  - path: \PANELS
+    types:
+    - fileExtension: panels
+      ispwType: PANELS
+  - path: \PANL
+    types:
+    - fileExtension: panl
+      ispwType: PANL
+  - path: \PARM
+    types:
+    - fileExtension: parm
+      ispwType: PARM
+  - path: \PDF
+    types:
+    - fileExtension: pdf
+      ispwType: PDF
+  - path: \PGM
+    types:
+    - fileExtension: cbl
+      ispwType: PGM
+  - path: \PKG
+    types:
+    - fileExtension: srx
+      ispwType: PKG
+  - path: \PK1
+    types:
+    - fileExtension: txt
+      ispwType: PK1
+  - path: \PLAN
+    types:
+    - fileExtension: plan
+      ispwType: PLAN
+  - path: \PLI
+    types:
+    - fileExtension: pli
+      ispwType: PLI
+  - path: \PL1
+    types:
+    - fileExtension: txt
+      ispwType: PL1
+  - path: \PPT
+    types:
+    - fileExtension: PPTX
+      ispwType: PPT
+  - path: \PRC
+    types:
+    - fileExtension: prc
+      ispwType: PRC
+  - path: \PREF
+    types:
+    - fileExtension: prefs
+      ispwType: PREF
+  - path: \PRJT
+    types:
+    - fileExtension: project
+      ispwType: PRJT
+  - path: \PRM
+    types:
+    - fileExtension: prm
+      ispwType: PRM
+  - path: \PROC
+    types:
+    - fileExtension: proc
+      ispwType: PROC
+  - path: \PROP
+    types:
+    - fileExtension: properties
+      ispwType: PROP
+  - path: \PSB
+    types:
+    - fileExtension: psb
+      ispwType: PSB
+  - path: \PSUB
+    types:
+    - fileExtension: psub
+      ispwType: PSUB
+  - path: \PWS
+    types:
+    - fileExtension: asm
+      ispwType: PWS
+  - path: \REFL
+    types:
+    - fileExtension: ref
+      ispwType: REFL
+  - path: \REXE
+    types:
+    - fileExtension: rexe
+      ispwType: REXE
+  - path: \REXI
+    types:
+    - fileExtension: rex
+      ispwType: REXI
+  - path: \REXL
+    types:
+    - fileExtension: lst
+      ispwType: REXL
+  - path: \REXX
+    types:
+    - fileExtension: rex
+      ispwType: REXX
+  - path: \REXXCOMP
+    types:
+    - fileExtension: rexxcomp
+      ispwType: REXXCOMP
+  - path: \RSLT
+    types:
+    - fileExtension: result
+      ispwType: RSLT
+  - path: \RWTR
+    types:
+    - fileExtension: cbl
+      ispwType: RWTR
+  - path: \SAMP
+    types:
+    - fileExtension: samp
+      ispwType: SAMP
+  - path: \SCEN
+    types:
+    - fileExtension: testscenario
+      ispwType: SCEN
+  - path: \SCHD
+    types:
+    - fileExtension: schd
+      ispwType: SCHD
+  - path: \SCR
+    types:
+    - fileExtension: SCR
+      ispwType: SCR
+  - path: \SKEL
+    types:
+    - fileExtension: skel
+      ispwType: SKEL
+  - path: \SKELS
+    types:
+    - fileExtension: skels
+      ispwType: SKELS
+  - path: \SLST
+    types:
+    - fileExtension: lst
+      ispwType: SLST
+  - path: \SRB
+    types:
+    - fileExtension: srb
+      ispwType: SRB
+  - path: \SRC
+    types:
+    - fileExtension: src
+      ispwType: SRC
+  - path: \SRO
+    types:
+    - fileExtension: cbl
+      ispwType: SRO
+  - path: \SRP
+    types:
+    - fileExtension: cbl
+      ispwType: SRP
+  - path: \SRPC
+    types:
+    - fileExtension: txt
+      ispwType: SRPC
+  - path: \SRX
+    types:
+    - fileExtension: srx
+      ispwType: SRX
+  - path: \STUB
+    types:
+    - fileExtension: stub
+      ispwType: STUB
+  - path: \SUIT
+    types:
+    - fileExtension: testsuite
+      ispwType: SUIT
+  - path: \SYSL
+    types:
+    - fileExtension: sysl
+      ispwType: SYSL
+  - path: \TABL
+    types:
+    - fileExtension: tabl
+      ispwType: TABL
+  - path: \TARC
+    types:
+    - fileExtension: archive
+      ispwType: TARC
+  - path: \TEXT
+    types:
+    - fileExtension: txt
+      ispwType: TEXT
+  - path: \TINT
+    types:
+    - fileExtension: interface
+      ispwType: TINT
+  - path: \TJCL
+    types:
+    - fileExtension: tjcl
+      ispwType: TJCL
+  - path: \TLST
+    types:
+    - fileExtension: listructure
+      ispwType: TLST
+  - path: \TOTT
+    types:
+    - fileExtension: tott
+      ispwType: TOTT
+  - path: \TPRF
+    types:
+    - fileExtension: prefs
+      ispwType: TPRF
+  - path: \TPRJ
+    types:
+    - fileExtension: project
+      ispwType: TPRJ
+  - path: \TRSL
+    types:
+    - fileExtension: result
+      ispwType: TRSL
+  - path: \TRV
+    types:
+    - fileExtension: csv
+      ispwType: TRV
+  - path: \TSCN
+    types:
+    - fileExtension: testscenario
+      ispwType: TSCN
+  - path: \TSTB
+    types:
+    - fileExtension: stub
+      ispwType: TSTB
+  - path: \TSUI
+    types:
+    - fileExtension: testsuite
+      ispwType: TSUI
+  - path: \TTT
+    types:
+    - fileExtension: ttt
+      ispwType: TTT
+  - path: \UNLK
+    types:
+    - fileExtension: unlk
+      ispwType: UNLK
+  - path: \V02
+    types:
+    - fileExtension: v02
+      ispwType: V02
+  - path: \WAI
+    types:
+    - fileExtension: cbl
+      ispwType: WAI
+  - path: \WDLG
+    types:
+    - fileExtension: wdlg
+      ispwType: WDLG
+  - path: \WORD
+    types:
+    - fileExtension: docx
+      ispwType: WORD
+  - path: \WRPT
+    types:
+    - fileExtension: wrpt
+      ispwType: WRPT
+  - path: \WWW
+    types:
+    - fileExtension: www
+      ispwType: WWW
+  - path: \WZZCNF
+    types:
+    - fileExtension: wzzcnf
+      ispwType: WZZCNF
+  - path: \XLRC
+    types:
+    - fileExtension: xlrc
+      ispwType: XLRC
+  - path: \XLSX
+    types:
+    - fileExtension: XLSX
+      ispwType: XLSX
+  - path: \XML
+    types:
+    - fileExtension: xml
+      ispwType: XML
+  - path: \ZIP
+    types:
+    - fileExtension: zip
+      ispwType: ZIP
+  port: 16196
+  readWriteTimeout: 90
+  runtimeConfig: iccga
+  stream: FTSDEMO
+  subAppl: MKS1
