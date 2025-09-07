@@ -6,8 +6,8 @@
       *                                                                *
       *  THIS CALLED PROGRAM IS THE COBOL DEMO PROGRAM USED FOR        *
       *  XPEDITER/TSO TRAINING SESSIONS.MKS                            *
-      *  09/17/24 ADDED COMMENT MKS DevOps                             *
-      * Tony
+      *  09/07/25 ADDED COMMENT MKS DevOps                             *
+      * 
       ******************************************************************
        ENVIRONMENT DIVISION.
        DATA DIVISION.

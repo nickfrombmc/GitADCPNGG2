@@ -6,7 +6,7 @@ ispwApplication:
   port: 16196
   readWriteTimeout: 90
   runtimeConfig: iccga
-  stream: FTSDEMO
+  stream: PLAY
   application: PLAY
   subAppl: PLAY
   assignmentPrefix: PLAY
