@@ -6,7 +6,7 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "MKS1"        // Change to your assigned application
+String ISPW_Application     = "PLAY"        // Change to your assigned application
 String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
 
 node {
@@ -30,7 +30,7 @@ node {
     gitCredentialsId: 'a7500faf-0dd3-42b5-8b00-0553524a79d2', // GHE testdrive
     gitRepoUrl: 'https://github.com/msingh9999/GitPlayMKS.git',
     runtimeConfig: 'ICCGA', // CWCC
-    stream: 'FTSDEMO'
+    stream: 'PLAY'
   }
 
   /*stage('Mainframe Build')
