@@ -1,9 +1,16 @@
 !!com.compuware.ispw.wzzms.models.IspwRoot
 ispwApplication:
-  application: MKS1
   encryptionProtocol: None
   host: cwcc.bmc.com
   hostCodePage: '1047'
+  port: 16196
+  readWriteTimeout: 90
+  runtimeConfig: iccga
+  stream: FTSDEMO
+  application: PLAY
+  subAppl: PLAY
+  assignmentPrefix: PLAY
+  sandbox: N
   pathMappings:
   - path: \ACTI
     types:
@@ -653,8 +660,3 @@ ispwApplication:
     types:
     - fileExtension: zip
       ispwType: ZIP
-  port: 16196
-  readWriteTimeout: 90
-  runtimeConfig: iccga
-  stream: FTSDEMO
-  subAppl: MKS1
