@@ -33,14 +33,14 @@ node {
     stream: 'PLAY'
   }
 
-  /*stage('Mainframe Build')
+  stage('Mainframe Build')
   {
     ispwOperation connectionId: 'de2ad7c3-e924-4dc2-84d5-d0c3afd3e756', // CWCC
     consoleLogResponseBody: false,
     credentialsId: 'PFHMKS0-CES', // CWCC
     ispwAction: 'BuildTask',
     ispwRequestBody: '''buildautomatically = true'''
-  }*/
+  }
 
  stage('Run Tests')
   {
