@@ -6,11 +6,11 @@ ispwApplication:
   port: 16196
   readWriteTimeout: 90
   runtimeConfig: iccga
-  stream: PLAY
-  application: PLAY
-  subAppl: PLAY
-  assignmentPrefix: PLAY
-  sandbox: N
+  stream: FTSDEMO
+  application: MKS2
+  subAppl: MKS2
+  assignmentPrefix: MKS2
+  sandbox: Y
   pathMappings:
   - path: \ACTI
     types:

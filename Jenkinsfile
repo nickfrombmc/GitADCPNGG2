@@ -6,7 +6,7 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "PLAY"        // Change to your assigned application
+String ISPW_Application     = "MKS2"        // Change to your assigned application
 String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
 
 node {
@@ -21,16 +21,17 @@ node {
     gitToIspwIntegration app: "${ISPW_Application}",
     subAppl: "${ISPW_Application}",
     ispwConfigPath: './ispwconfig.yml',
-    branchMapping: '''*main* => QA, per-branch'
-    bug* => HLD, per-branch
-    *feature1* => STG1, per-branch
-    *feature2* => STG2, per-branch''',
+    branchMapping: '''*main* => STG, per-branch'
+    bug* => EMR, per-branch
+    *feature1* => QA1, per-branch
+    *feature2* => QA2, per-branch
+    *feature3* => QA3, per-branch''',
     connectionId: 'de2ad7c3-e924-4dc2-84d5-d0c3afd3e756', // CWCC
     credentialsId: "${HCI_Token}",
     gitCredentialsId: 'a7500faf-0dd3-42b5-8b00-0553524a79d2', // GHE testdrive
-    gitRepoUrl: 'https://github.com/msingh9999/GitPlayMKS.git',
+    gitRepoUrl: 'https://github.com/msingh9999/GitADCPMKS2.git',
     runtimeConfig: 'ICCGA', // CWCC
-    stream: 'PLAY'
+    stream: 'FTSDEMO'
   }
 
   stage('Mainframe Build')
