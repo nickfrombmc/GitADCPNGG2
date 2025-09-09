@@ -21,7 +21,7 @@ node {
     gitToIspwIntegration app: "${ISPW_Application}",
     subAppl: "${ISPW_Application}",
     ispwConfigPath: './ispwconfig-nosb.yml',
-    branchMapping: '''*main* => STG, per-branch'
+    branchMapping: '''*release* => STG, per-branch'
     bug* => EMR, per-branch
     *feature1* => QA1, per-branch
     *feature2* => QA2, per-branch
