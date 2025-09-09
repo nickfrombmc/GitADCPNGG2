@@ -20,7 +20,7 @@ node {
     branch = env.BRANCH_NAME
     echo branch
     
-    if (env.BRANCH_NAME == "main")
+    if (branch == "main")
     {
         return
     }
