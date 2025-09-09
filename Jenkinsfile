@@ -9,24 +9,20 @@ import java.net.URL
 String ISPW_Application     = "MKS2"        // Change to your assigned application
 String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
 
+println "branch: " + env.BRANCH_NAME
+    
+if (env.BRANCH_NAME == "main")
+{
+    echo "Strings are equal"
+    currentBuild.result = 'SUCCESS'
+    return
+}
+
 node {
   stage ('Checkout')
   {
     // Get the code from the Git repository
-    checkout scm
-   
-    def branch = ""
-    
-    branch = env.BRANCH_NAME
-    echo branch
-    
-    if (branch == "main")
-    {
-        echo "Strings are equal"
-        currentBuild.result = 'SUCCESS'
-        return
-    }
-    
+    checkout scm 
   }
 
   stage('Mainframe Load')
