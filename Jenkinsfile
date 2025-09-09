@@ -18,7 +18,7 @@ node {
     def branch = ""
     
     branch = env.BRANCH_NAME
-    echo ${branch}
+    echo branch
     
     if (env.BRANCH_NAME == "main")
     {
