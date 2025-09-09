@@ -22,6 +22,8 @@ node {
     
     if (branch == "main")
     {
+        echo "Strings are equal"
+        currentBuild.result = 'SUCCESS'
         return
     }
     
