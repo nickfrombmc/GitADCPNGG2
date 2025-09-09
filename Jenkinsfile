@@ -14,6 +14,17 @@ node {
   {
     // Get the code from the Git repository
     checkout scm
+   
+    def branch = ""
+    
+    branch = env.BRANCH_NAME
+    echo branch
+    
+    if (env.BRANCH_NAME == "main")
+    {
+        return
+    }
+    
   }
 
   stage('Mainframe Load')
