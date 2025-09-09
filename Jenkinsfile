@@ -15,7 +15,9 @@ node {
     // Get the code from the Git repository
     checkout scm
    
-    //echo "$env.BRANCH_NAME"
+    def branch = ""
+    
+    echo ${env.BRANCH_NAME}
     
     if (env.BRANCH_NAME == "main")
     {
