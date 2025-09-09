@@ -14,6 +14,14 @@ node {
   {
     // Get the code from the Git repository
     checkout scm
+   
+    echo "Current branch: ${env.BRANCH_NAME}"
+    
+    if (${env.BRANCH_NAME} == "main")
+    {
+        return
+    }
+    
   }
 
   stage('Mainframe Load')
