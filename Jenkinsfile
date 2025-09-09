@@ -13,7 +13,6 @@ println "branch: " + env.BRANCH_NAME
     
 if (env.BRANCH_NAME == "main")
 {
-    echo "Strings are equal"
     currentBuild.result = 'SUCCESS'
     return
 }
