@@ -8,6 +8,10 @@ import java.net.URL
 
 String ISPW_Application     = "MKS2"        // Change to your assigned application
 String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
+String Host_Connection      = "de2ad7c3-e924-4dc2-84d5-d0c3afd3e756"
+String Jenkins_CES_Credentials = "PFHMKS0-CES"
+String ISPW_Runtime_Config  = "ICCGA"
+String ISPW_Assignment = ""
 
 println "branch: " + env.BRANCH_NAME
     
@@ -74,4 +78,144 @@ node {
     sleep(7)
     println "Deploy successfull!"
   }
+  
+      if (env.BRANCH_NAME.startsWith("release"))
+      {
+            def continueRelease         = false
+    
+            echo "Paramters"
+            echo 'ISPW_Application          : ' + ISPW_Application        
+            echo 'ISPW_Assignment           : ' + ISPW_Assignment         
+            echo 'ISPW_Owner_Id             : ' + HCI_Token            
+            echo 'Host_Connection           : ' + Host_Connection          
+            echo 'Jenkins_CES_Credentials   : ' + Jenkins_CES_Credentials  
+            echo 'ISPW_Runtime_Config       : ' + ISPW_Runtime_Config     
+               
+        
+            stage("Manual Intervention"){
+        
+               //input 'Manual Intervention Point for Demo Purposes'
+               // Define a String parameter for user input
+                        ISPW_Assignment = input(
+                            id: 'userInputName',
+                            message: 'Please enter Container name:',
+                            parameters: [
+                                [$class: 'StringParameterDefinition', defaultValue: 'Guest', description: 'Container Name', name: 'nameInput']
+                            ]
+                        )
+        
+            }
+        
+            dir('./') {
+                deleteDir()
+            }
+        
+            //def releaseNumber       = env.BRANCH_NAME.substring(1, 5)
+            //def releaseNumberParts  = releaseNumber.split("[.]")
+        
+            ISPW_Release = "MKS2" + env.BRANCH_NAME.substring(1, 5)
+        
+            echo "ISPW_Release              : " + ISPW_Release
+        
+            currentBuild.displayName = ISPW_Application + "/" + HCI_Token + ", Release: " + ISPW_Release
+            
+            stage("Create ISPW Release"){
+        
+                ispwOperation (
+                    connectionId:           Host_Connection, 
+                    credentialsId:          Jenkins_CES_Credentials, 
+                    consoleLogResponseBody: true,             
+                    ispwAction:             'CreateRelease', 
+                    ispwRequestBody: """
+                        runtimeConfiguration=${ISPW_Runtime_Config}
+                        stream=FTSDEMO
+                        application=${ISPW_Application}
+                        subAppl=${ISPW_Application}
+                        releaseId=${ISPW_Release}
+                        description=RELEASE ${ISPW_Release} FOR GITFLOW APP ${ISPW_Application}
+                    """
+                )
+            }
+            
+            stage("Transfer Tasks"){
+                
+                ispwOperation(
+                    connectionId:           Host_Connection, 
+                    credentialsId:          Jenkins_CES_Credentials, 
+                    consoleLogResponseBody: true,             
+                    ispwAction:             'TransferTask', 
+                    ispwRequestBody:        """
+                        runtimeConfiguration=${ISPW_Runtime_Config}
+                        assignmentId=${ISPW_Assignment}
+                        level=RLSE
+                        containerId=${ISPW_Release}
+                        containerType=R
+                    """
+                )        
+            }
+            
+               stage("User Acceptance Test"){
+                sleep 10
+            }
+        
+        
+            stage("Manual Intervention"){
+        
+                input 'Manual Intervention Point for Demo Purposes'
+        
+            }
+        
+            stage("Promote Release to PROD"){
+                
+                ispwOperation(
+                    connectionId:           Host_Connection, 
+                    credentialsId:          Jenkins_CES_Credentials, 
+                    consoleLogResponseBody: true,             
+                    ispwAction:             'PromoteRelease', 
+                    ispwRequestBody:        """
+                        runtimeConfiguration=${ISPW_Runtime_Config}
+                        releaseId=${ISPW_Release}
+                        level=STG                
+                    """
+                )        
+            }
+        
+            stage("Decision"){
+        
+                def releaseStatus
+        
+                releaseStatus = input(
+                    message: 'Select the status for the release from the options below and click "Proceed"', 
+                    parameters: [
+                        choice(choices: ['Successful Release', 'Abort Release'], description: 'Options', name: 'releaseOption')]        
+                )
+        
+                if(releaseStatus == 'Successful Release'){
+                    continueRelease = true
+                }
+                else{
+                    continueRelease = false
+                }
+            }
+        
+            if(continueRelease){
+        
+                stage("Close Release"){
+        
+                    ispwOperation(
+                        connectionId:           Host_Connection, 
+                        credentialsId:          Jenkins_CES_Credentials, 
+                        consoleLogResponseBody: true,             
+                        ispwAction:             'CloseRelease', 
+                        ispwRequestBody:        """
+                            runtimeConfiguration=${ISPW_Runtime_Config}
+                            releaseId=${ISPW_Release}
+                        """
+                    )
+                }
+            }
+            else
+            {
+            }
+      }
 }
