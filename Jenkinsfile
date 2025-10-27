@@ -6,10 +6,10 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "MKS2"        // Change to your assigned application
-String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
+String ISPW_Application     = "NGG2"        // Change to your assigned application
+String HCI_Token            = "IMINGG0"     // Change to your assigned ID
 String Host_Connection      = "de2ad7c3-e924-4dc2-84d5-d0c3afd3e756"
-String Jenkins_CES_Credentials = "PFHMKS0-CES"
+String Jenkins_CES_Credentials = "IMINGG0_CES"
 String ISPW_Runtime_Config  = "ICCGA"
 String ISPW_Assignment = ""
 
@@ -41,7 +41,7 @@ node {
     connectionId: 'de2ad7c3-e924-4dc2-84d5-d0c3afd3e756', // CWCC
     credentialsId: "${HCI_Token}",
     gitCredentialsId: 'a7500faf-0dd3-42b5-8b00-0553524a79d2', // GHE testdrive
-    gitRepoUrl: 'https://github.com/msingh9999/GitADCPMKS2.git',
+    gitRepoUrl: 'https://github.com/nickfrombmc/GitADCPNGG2.git',
     runtimeConfig: 'ICCGA', // CWCC
     stream: 'FTSDEMO'
   }
@@ -50,7 +50,7 @@ node {
   {
     ispwOperation connectionId: 'de2ad7c3-e924-4dc2-84d5-d0c3afd3e756', // CWCC
     consoleLogResponseBody: false,
-    credentialsId: 'PFHMKS0-CES', // CWCC
+    credentialsId: 'IMINGG0_CES', // CWCC
     ispwAction: 'BuildTask',
     ispwRequestBody: '''buildautomatically = true'''
   }
@@ -113,7 +113,7 @@ node {
             //def releaseNumber       = env.BRANCH_NAME.substring(1, 5)
             //def releaseNumberParts  = releaseNumber.split("[.]")
         
-            ISPW_Release = "MKS2" + env.BRANCH_NAME.substring(1, 5)
+            ISPW_Release = "NGG2" + env.BRANCH_NAME.substring(1, 5)
         
             echo "ISPW_Release              : " + ISPW_Release
         

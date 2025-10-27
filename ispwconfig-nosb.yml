@@ -7,9 +7,9 @@ ispwApplication:
   readWriteTimeout: 90
   runtimeConfig: iccga
   stream: FTSDEMO
-  application: MKS2
-  subAppl: MKS2
-  assignmentPrefix: MKS2
+  application: NGG2
+  subAppl: NGG2
+  assignmentPrefix: NGG2
   sandbox: N
   pathMappings:
   - path: \ACTI
