@@ -40,7 +40,7 @@ node {
     *feature3* => QA3, per-branch''',
     connectionId: 'de2ad7c3-e924-4dc2-84d5-d0c3afd3e756', // CWCC
     credentialsId: "${HCI_Token}",
-    gitCredentialsId: 'a7500faf-0dd3-42b5-8b00-0553524a79d2', // GHE testdrive
+    gitCredentialsId: 'IMINGG0-Git', // GHE testdrive
     gitRepoUrl: 'https://github.com/nickfrombmc/GitADCPNGG2.git',
     runtimeConfig: 'ICCGA', // CWCC
     stream: 'FTSDEMO'

@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 ispwEditing=TRUE
 ispwGitAssignDesc=${user}-${project_name}
-ispwMappingLevel=DEV3
+ispwMappingLevel=DEV1
 ispwYamlConfigPath={project_loc}/ispwconfig.yml
