@@ -93,31 +93,31 @@ node {
                
         
             stage("Manual Intervention"){
-        
-               //input 'Manual Intervention Point for Demo Purposes'
-               // Define a String parameter for user input
-                        ISPW_Assignment = input(
-                            id: 'userInputName',
-                            message: 'Please enter Container name:',
-                            parameters: [
-                                [$class: 'StringParameterDefinition', defaultValue: 'Guest', description: 'Container Name', name: 'nameInput']
-                            ]
-                        )
-        
-            }
-        
-            dir('./') {
-                deleteDir()
-            }
-        
-            //def releaseNumber       = env.BRANCH_NAME.substring(1, 5)
-            //def releaseNumberParts  = releaseNumber.split("[.]")
-        
-            ISPW_Release = "NGG2" + env.BRANCH_NAME.substring(1, 5)
-        
-            echo "ISPW_Release              : " + ISPW_Release
-        
-            currentBuild.displayName = ISPW_Application + "/" + HCI_Token + ", Release: " + ISPW_Release
+    
+           //input 'Manual Intervention Point for Demo Purposes'
+           // Define a String parameter for user input
+                    ISPW_Assignment = input(
+                        id: 'userInputName',
+                        message: 'Please enter Container name:',
+                        parameters: [
+                            [$class: 'StringParameterDefinition', defaultValue: 'MKS2000020', description: 'Container Name', name: 'nameInput']
+                        ]
+                    )
+    
+        }
+    
+        dir('./') {
+            deleteDir()
+        }
+    
+        //def releaseNumber = env.BRANCH_NAME.substring(1, 5)
+        //def releaseNumberParts = releaseNumber.split("[.]")
+    
+        ISPW_Release = ISPW_Application + "REL" + env.BRANCH_NAME.substring(7, 9)
+    
+        echo "ISPW_Release              : " + ISPW_Release
+    
+        currentBuild.displayName = ISPW_Application + "/" + HCI_Token + ", Release: " + ISPW_Release
             
             stage("Create ISPW Release"){
         
