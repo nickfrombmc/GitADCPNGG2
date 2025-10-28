@@ -73,11 +73,6 @@ node {
     println "Sonar analysis successfull!"
   }
   
-  stage('Deploy to Runtime')
-  {
-    sleep(7)
-    println "Deploy successfull!"
-  }
   
       if (env.BRANCH_NAME.startsWith("release"))
       {
@@ -147,7 +142,7 @@ node {
                     ispwRequestBody:        """
                         runtimeConfiguration=${ISPW_Runtime_Config}
                         assignmentId=${ISPW_Assignment}
-                        level=RLSE
+                        level=STG
                         containerId=${ISPW_Release}
                         containerType=R
                     """
