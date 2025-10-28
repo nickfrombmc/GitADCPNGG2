@@ -147,7 +147,7 @@ node {
                     ispwRequestBody:        """
                         runtimeConfiguration=${ISPW_Runtime_Config}
                         assignmentId=${ISPW_Assignment}
-                        level=RLSE
+                        level=STG
                         containerId=${ISPW_Release}
                         containerType=R
                     """
